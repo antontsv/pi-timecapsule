@@ -15,7 +15,7 @@ fi;
 sudo mkdir "$mount_point"
 echo "/dev/$disk_name $mount_point auto defaults 0 2" | sudo tee -a /etc/fstab
 sudo mount "/dev/$disk_name"
-echo "/mnt/TimeMachine \"Time Machine\" options:tm" | sudo tee -a /etc/netatalk/AppleVolumes.defausudo useradd $user
+echo "/mnt/TimeMachine \"Time Machine\" options:tm" | sudo tee -a /etc/netatalk/AppleVolumessudo useradd $user
 echo "Set password for $user..."
-sudp passwd $user
+sudo passwd $user
 sudo service netatalk restart
